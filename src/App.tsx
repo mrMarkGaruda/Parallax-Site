@@ -4,7 +4,6 @@ import {
   useMemo,
   useRef,
   useState,
-  useImperativeHandle,
   type ChangeEvent,
   type ElementType,
   type FormEvent,
@@ -34,8 +33,6 @@ import {
   FiThermometer,
   FiUsers,
   FiWind,
-  FiMail,
-  FiPhone,
 } from 'react-icons/fi';
 
 // Asset Imports
