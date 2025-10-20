@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&family=Caveat:wght@400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color: #2C3E25;
+  background: #F8F6F0;
+  font-family: 'Inter', sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  @apply text-brand-text-dark font-body antialiased;
+  background: linear-gradient(180deg, rgba(248, 246, 240, 0.92) 0%, #fbfaf4 55%, #eef2e6 100%);
+  min-height: 100vh;
+  overflow-x: hidden;
+  overscroll-behavior-y: contain;
+}
+
+#root {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: rgba(124, 179, 66, 0.3);
+  color: #2D5016;
+}
+
+@layer base {
+  section {
+    scroll-margin-top: 6rem;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display;
+  }
+
+  a {
+    @apply text-brand-primary transition-colors;
+  }
+
+  a:hover {
+    @apply text-brand-secondary;
+  }
+}
+
+@layer utilities {
+  .section-eyebrow {
+    @apply text-xs font-semibold uppercase tracking-[0.5em] text-brand-text-light/80;
+  }
+
+  .container-content {
+    @apply mx-auto w-full max-w-content px-4 sm:px-6 lg:px-8;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 rounded-full bg-brand-primary px-6 py-3 text-sm font-medium text-white shadow-soft transition-transform duration-300 ease-out hover:-translate-y-1 hover:shadow-glow focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 rounded-full border border-brand-primary/30 bg-white/70 px-6 py-3 text-sm font-medium text-brand-primary shadow-sm transition-all duration-300 ease-out hover:-translate-y-1 hover:border-brand-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary;
+  }
+
+  .glass-card {
+    @apply rounded-3xl border border-white/10 bg-white/10 backdrop-blur-xl shadow-glass;
+  }
+
+  .section-title {
+    @apply font-display text-3xl font-semibold leading-tight sm:text-4xl;
+  }
+
+  .section-subtitle {
+    @apply mt-4 text-lg text-brand-text-light sm:text-xl;
+  }
+
+  .card-surface {
+    @apply rounded-3xl border border-white/40 bg-white/80 shadow-soft backdrop-blur;
+  }
+
+  .stat-pill {
+    @apply inline-flex items-center gap-2 rounded-full border border-brand-primary/20 bg-white/80 px-4 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-brand-text-light;
+  }
+
+  .image-mask {
+    mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 0.88) 60%, transparent 100%);
+  }
+
+  .parallax-frame {
+    @apply overflow-hidden rounded-[2.8rem] border border-white/40 bg-white/40 shadow-soft backdrop-blur;
+  }
+}
